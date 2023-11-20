@@ -37,6 +37,10 @@ public class Role implements GrantedAuthority {
         this.name = role_user;
     }
 
+    public Role(Long id) {
+        this.id = id;
+    }
+
     @Override
     public String getAuthority() {
         return getName();

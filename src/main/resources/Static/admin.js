@@ -146,6 +146,8 @@ deleteUserForm.addEventListener('submit', (e) => {
         .then(res => res.json())
         .then(data => {
             removeUser(currentUserId);
+            users = data;
+            renderUsers(users);
             deleteUserForm.removeEventListener('submit', () => {
             });
             $("#modalDelete").modal("hide")
